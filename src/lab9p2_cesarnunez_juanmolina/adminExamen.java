@@ -9,6 +9,23 @@ package lab9p2_cesarnunez_juanmolina;
  *
  * @author Hwan
  */
-public class adminExamen {
+public class adminExamen implements Runnable{
+    private int tiempo,puntaje;
+    private String notificacion;
+    private boolean estado = true; 
     
+    @Override
+    public void run(){
+        while(estado){
+           
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+            }
+        }
+    }
 }
+
+
+    

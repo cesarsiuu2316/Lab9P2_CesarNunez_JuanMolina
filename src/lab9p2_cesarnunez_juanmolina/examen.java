@@ -13,4 +13,21 @@ import java.util.ArrayList;
  */
 public class examen {
     private ArrayList<preguntas> examen;
+
+    public examen() {
+    }
+
+    public examen(ArrayList<preguntas> examen) {
+        this.examen = examen;
+    }
+
+    public ArrayList<preguntas> getExamen() {
+        return examen;
+    }
+
+    public void setExamen(ArrayList<preguntas> examen) {
+        this.examen = examen;
+    }
+    
+    
 }

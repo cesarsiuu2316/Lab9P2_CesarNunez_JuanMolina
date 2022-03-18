@@ -10,5 +10,12 @@ package lab9p2_cesarnunez_juanmolina;
  * @author Hwan
  */
 public class admin extends usuario{
+
+    public admin() {
+    }
+
+    public admin(String usuario, String contrasena) {
+        super(usuario, contrasena);
+    }
     
 }

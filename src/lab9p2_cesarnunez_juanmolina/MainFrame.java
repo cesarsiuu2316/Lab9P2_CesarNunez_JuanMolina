@@ -241,4 +241,5 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_usuarioLogin2;
     private javax.swing.JTextField jtf_usuarioRegistro1;
     // End of variables declaration//GEN-END:variables
+Thread hilo;
 }

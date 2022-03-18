@@ -15,5 +15,53 @@ public class alumno extends usuario{
     private int idEstudiante;
     private String carrera;
     private ArrayList<clase> clases;
+
+    public alumno() {
+    }
+
+    public alumno(int idEstudiante, String carrera, ArrayList<clase> clases) {
+        this.idEstudiante = idEstudiante;
+        this.carrera = carrera;
+        this.clases = clases;
+    }
+
+    public alumno(int idEstudiante, String carrera, ArrayList<clase> clases, String nombre, String usuario, String contrasena) {
+        super(nombre, usuario, contrasena);
+        this.idEstudiante = idEstudiante;
+        this.carrera = carrera;
+        this.clases = clases;
+    }
+
+    
+
+    public int getIdEstudiante() {
+        return idEstudiante;
+    }
+
+    public void setIdEstudiante(int idEstudiante) {
+        this.idEstudiante = idEstudiante;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public void setCarrera(String carrera) {
+        this.carrera = carrera;
+    }
+
+    public ArrayList<clase> getClases() {
+        return clases;
+    }
+
+    public void setClases(ArrayList<clase> clases) {
+        this.clases = clases;
+    }
+
+    @Override
+    public String toString() {
+        return  super.toString() + "alumno{" + "idEstudiante=" + idEstudiante + ", carrera=" + carrera + ", clases=" + clases + '}';
+    }
+    
     
 }
