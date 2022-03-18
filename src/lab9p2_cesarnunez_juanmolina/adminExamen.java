@@ -6,6 +6,7 @@
 package lab9p2_cesarnunez_juanmolina;
 
 import java.util.Date;
+import javax.swing.JLabel;
 
 /**
  *
@@ -15,10 +16,29 @@ public class adminExamen implements Runnable{
     private int secs,mins,hrs = 0;
     private String notificacion ;
     private boolean estado = true; 
+    private JLabel tiempo,notif;
     
-    public adminExamen() {
+    public adminExamen(JLabel tiempo, JLabel notif) {
+        this.tiempo = tiempo;
+        this.notif = notif;
     }
 
+    public JLabel getNotif() {
+        return notif;
+    }
+
+    public void setNotif(String texto) {
+        notif.setText(texto);
+    }
+    
+    public JLabel getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(String texto) {
+        tiempo.setText(texto);
+    }
+    
     public int getSecs() {
         return secs;
     }
@@ -62,12 +82,20 @@ public class adminExamen implements Runnable{
     @Override
     public void run(){
         while(estado){
-            
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException ex) {
+            for (hrs= 0; hrs < 60 ; hrs++) {
+                for(mins=0; mins<60; mins++){
+                    setNotif("Ya han pasado: "+mins+" minutos");
+                    for(secs=0; secs<60;secs++){
+                        String temp = String.format("%02d",hrs)+ ":" + String.format("%02d",mins) + ":" + String.format("%02d",secs);
+                        setTiempo(temp);
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException ex) {
+                        }
+                    }
+                }
             }
+            
         }
     }
 }

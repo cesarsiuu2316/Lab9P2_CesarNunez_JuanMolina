@@ -11,6 +11,8 @@ package lab9p2_cesarnunez_juanmolina;
  */
 public class admin extends usuario {
 
+    private String usuario = "admin";
+    
     public admin() {
     }
 
@@ -20,6 +22,14 @@ public class admin extends usuario {
 
     public admin(String contrasena) {
         super(contrasena);
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
     }
     
     

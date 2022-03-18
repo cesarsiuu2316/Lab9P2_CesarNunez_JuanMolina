@@ -27,18 +27,17 @@ public class jf_examen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jLabel1 = new javax.swing.JLabel();
+        tiempoLabel = new javax.swing.JLabel();
+        notificacionLabel = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Tiempo:");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(457, 50, -1, -1));
+        getContentPane().add(tiempoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, 80, 20));
+        getContentPane().add(notificacionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 210, 20));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +78,8 @@ public class jf_examen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel notificacionLabel;
+    private javax.swing.JLabel tiempoLabel;
     // End of variables declaration//GEN-END:variables
 }
