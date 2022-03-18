@@ -12,6 +12,7 @@ package lab9p2_cesarnunez_juanmolina;
 public class admin extends usuario{
 
     public admin() {
+        
     }
 
     public admin(String usuario, String contrasena) {
