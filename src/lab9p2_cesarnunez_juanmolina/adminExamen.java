@@ -5,19 +5,64 @@
  */
 package lab9p2_cesarnunez_juanmolina;
 
+import java.util.Date;
+
 /**
  *
  * @author Hwan
  */
 public class adminExamen implements Runnable{
-    private int tiempo,puntaje;
-    private String notificacion;
+    private int secs,mins,hrs = 0;
+    private String notificacion ;
     private boolean estado = true; 
     
+    public adminExamen() {
+    }
+
+    public int getSecs() {
+        return secs;
+    }
+
+    public void setSecs() {
+        this.secs++;
+    }
+
+    public int getMins() {
+        return mins;
+    }
+
+    public void setMins() {
+        this.mins  ++;
+    }
+
+    public int getHrs() {
+        return hrs;
+    }
+
+    public void setHrs() {
+        this.hrs ++;
+    }
+
+    public String getNotificacion() {
+        return notificacion;
+    }
+
+    public void setNotificacion() {
+        this.notificacion = "Ya han pasado: " + mins + "minutos";
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
     @Override
     public void run(){
         while(estado){
-           
+            
 
             try {
                 Thread.sleep(1000);
