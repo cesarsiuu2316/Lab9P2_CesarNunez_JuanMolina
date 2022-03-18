@@ -10,13 +10,13 @@ package lab9p2_cesarnunez_juanmolina;
  * @author Hwan
  */
 public class usuario {
-    private String nombre,contrasena;
+    private String nombre, usuario, contrasena;
 
     public usuario() {
     }
 
-    public usuario(String nombre, String usuario, String contrasena) {
-        this.nombre = nombre;
+    public usuario(String usuario, String contrasena) {
+        this.usuario = usuario;
         this.contrasena = contrasena;
     }
     
@@ -39,6 +39,15 @@ public class usuario {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }    
+    
 
     @Override
     public String toString() {

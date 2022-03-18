@@ -10,28 +10,12 @@ package lab9p2_cesarnunez_juanmolina;
  * @author cesar
  */
 public class admin extends usuario {
-
-    private String usuario = "admin";
     
     public admin() {
     }
 
-    public admin(String nombre, String contrasena) {
-        super(nombre, contrasena);
+    public admin(String usuario, String contrasena) {
+        super(usuario, contrasena);
     }
-
-    public admin(String contrasena) {
-        super(contrasena);
-    }
-
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-    
-    
-    
+        
 }

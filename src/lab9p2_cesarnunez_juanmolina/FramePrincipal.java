@@ -15,13 +15,21 @@ import javax.swing.JOptionPane;
 public class FramePrincipal extends javax.swing.JFrame {
 
     private ArrayList<usuario> usuarios = new ArrayList();
-    private admin a = new admin("admin","admin1234"); 
-    private String tipo = "";
+    private admin a = new admin("admin","admin1234");
+    private usuario usuarioActual;
     
     public FramePrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
+
+    public ArrayList<usuario> getUsuarios() {
+        return usuarios;
+    }
+
+    public usuario getUsuarioActual() {
+        return usuarioActual;
+    }      
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -275,7 +283,16 @@ public class FramePrincipal extends javax.swing.JFrame {
     private void jb_ingresarLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarLoginMouseClicked
         boolean band = false;
         for (usuario u : usuarios) {
-            
+            if(u.getUsuario().equals(jtf_usuarioLogin.getText()) && u.getContrasena().equals(jtf_contraLogin.getText())){
+                band = true;
+                break;
+            }
+        }
+        
+        if(band == true){
+            JOptionPane.showMessageDialog(null, "El usuario se logueó con éxito.");
+        }else{
+            JOptionPane.showMessageDialog(null, "El usuario o la contraseña no son válidos.");
         }
     }//GEN-LAST:event_jb_ingresarLoginMouseClicked
 
