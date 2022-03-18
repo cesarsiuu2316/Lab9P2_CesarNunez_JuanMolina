@@ -15,7 +15,7 @@ public class usuario {
     public usuario() {
     }
 
-    public usuario(String nombre, String contrasena) {
+    public usuario(String nombre, String usuario, String contrasena) {
         this.nombre = nombre;
         this.contrasena = contrasena;
     }
