@@ -41,9 +41,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jtf_confirmarContra = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jb_registrarse = new javax.swing.JButton();
-        jf_examen = new javax.swing.JFrame();
-        jLabel1 = new javax.swing.JLabel();
-        tiempoLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -142,31 +139,6 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addGap(47, 47, 47)
                 .addComponent(jb_registrarse)
                 .addContainerGap(96, Short.MAX_VALUE))
-        );
-
-        jLabel1.setText("Tiempo:");
-
-        tiempoLabel.setText("jLabel3");
-
-        javax.swing.GroupLayout jf_examenLayout = new javax.swing.GroupLayout(jf_examen.getContentPane());
-        jf_examen.getContentPane().setLayout(jf_examenLayout);
-        jf_examenLayout.setHorizontalGroup(
-            jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_examenLayout.createSequentialGroup()
-                .addContainerGap(249, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(28, 28, 28)
-                .addComponent(tiempoLabel)
-                .addGap(43, 43, 43))
-        );
-        jf_examenLayout.setVerticalGroup(
-            jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jf_examenLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(tiempoLabel))
-                .addContainerGap(260, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -315,7 +287,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -327,7 +298,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jb_ingresarLogin;
     private javax.swing.JButton jb_registrarse;
     private javax.swing.JButton jb_registro;
-    private javax.swing.JFrame jf_examen;
     private javax.swing.JFrame jf_registro;
     private javax.swing.JTextField jtf_confirmarContra;
     private javax.swing.JTextField jtf_contraLogin;
@@ -335,6 +305,5 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_nombreRegistro;
     private javax.swing.JTextField jtf_usuarioLogin;
     private javax.swing.JTextField jtf_usuarioRegistro;
-    private javax.swing.JLabel tiempoLabel;
     // End of variables declaration//GEN-END:variables
 }
