@@ -26,7 +26,7 @@ public class alumno extends usuario{
     }
 
     public alumno(int idEstudiante, String carrera, ArrayList<clase> clases, String nombre, String usuario, String contrasena) {
-        super(nombre, usuario, contrasena);
+        super(nombre, contrasena);
         this.idEstudiante = idEstudiante;
         this.carrera = carrera;
         this.clases = clases;

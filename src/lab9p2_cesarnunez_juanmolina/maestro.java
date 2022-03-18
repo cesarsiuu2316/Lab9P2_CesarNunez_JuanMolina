@@ -20,7 +20,7 @@ public class maestro extends usuario{
     }
 
     public maestro(int idMaestro, String nombre, String usuario, String contrasena) {
-        super(nombre, usuario, contrasena);
+        super(nombre, contrasena);
         this.idMaestro = idMaestro;
     }
 
