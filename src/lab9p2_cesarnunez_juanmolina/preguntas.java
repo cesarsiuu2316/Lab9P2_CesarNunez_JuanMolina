@@ -9,7 +9,6 @@ package lab9p2_cesarnunez_juanmolina;
  *
  * @author Hwan
  */
-public class pregunta {
-    private String pregunta;
-    private boolean respuesta;
+public class preguntas {
+    
 }

@@ -5,12 +5,10 @@
  */
 package lab9p2_cesarnunez_juanmolina;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Hwan
  */
-public class examen {
-    private ArrayList<preguntas> examen;
+public class adminExamen {
+    
 }
