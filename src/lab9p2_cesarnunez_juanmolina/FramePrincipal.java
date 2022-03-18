@@ -5,6 +5,7 @@
  */
 package lab9p2_cesarnunez_juanmolina;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -13,9 +14,9 @@ import javax.swing.JOptionPane;
  */
 public class FramePrincipal extends javax.swing.JFrame {
 
-    /**
-     * Creates new form FramePrincipal
-     */
+    private ArrayList<usuario> usuarios = new ArrayList();
+    private admin a = new admin("admin", "admin1234");
+    
     public FramePrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -41,6 +42,9 @@ public class FramePrincipal extends javax.swing.JFrame {
         jtf_confirmarContra = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jb_registrarse = new javax.swing.JButton();
+        jrb_alumno = new javax.swing.JRadioButton();
+        jrb_maestro = new javax.swing.JRadioButton();
+        bg_tipoUsuario = new javax.swing.ButtonGroup();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -55,7 +59,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jtf_nombreRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setText("Usuario: ");
+        jLabel8.setText("Usuario / ID:");
 
         jtf_usuarioRegistro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
@@ -80,47 +84,55 @@ public class FramePrincipal extends javax.swing.JFrame {
             }
         });
 
+        bg_tipoUsuario.add(jrb_alumno);
+        jrb_alumno.setText("Alumno");
+
+        bg_tipoUsuario.add(jrb_maestro);
+        jrb_maestro.setText("Maestro");
+
         javax.swing.GroupLayout jf_registroLayout = new javax.swing.GroupLayout(jf_registro.getContentPane());
         jf_registro.getContentPane().setLayout(jf_registroLayout);
         jf_registroLayout.setHorizontalGroup(
             jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jf_registroLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
                 .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jf_registroLayout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addGap(0, 135, Short.MAX_VALUE)
                         .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jf_registroLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(18, 18, 18)
-                                .addComponent(jtf_confirmarContra, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jf_registroLayout.createSequentialGroup()
-                                .addGap(114, 114, 114)
-                                .addComponent(jLabel8)
-                                .addGap(18, 18, 18)
-                                .addComponent(jtf_usuarioRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_confirmarContra, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_contraRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtf_usuarioRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
                                 .addComponent(jLabel7)
                                 .addGap(18, 18, 18)
                                 .addComponent(jtf_nombreRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jf_registroLayout.createSequentialGroup()
-                                .addGap(88, 88, 88)
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addComponent(jtf_contraRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jf_registroLayout.createSequentialGroup()
-                        .addGap(310, 310, 310)
-                        .addComponent(jLabel5))
-                    .addGroup(jf_registroLayout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(jb_registrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(137, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
+                                .addComponent(jrb_alumno)
+                                .addGap(54, 54, 54)
+                                .addComponent(jrb_maestro)
+                                .addGap(131, 131, 131))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addGap(181, 181, 181))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_registroLayout.createSequentialGroup()
+                                .addComponent(jb_registrarse, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(142, 142, 142)))))
+                .addGap(134, 134, 134))
         );
         jf_registroLayout.setVerticalGroup(
             jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jf_registroLayout.createSequentialGroup()
-                .addGap(75, 75, 75)
+                .addGap(59, 59, 59)
                 .addComponent(jLabel5)
-                .addGap(43, 43, 43)
+                .addGap(31, 31, 31)
                 .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(jtf_nombreRegistro, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -136,9 +148,13 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
                     .addComponent(jtf_confirmarContra, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
+                .addGap(36, 36, 36)
+                .addGroup(jf_registroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jrb_alumno)
+                    .addComponent(jrb_maestro))
+                .addGap(30, 30, 30)
                 .addComponent(jb_registrarse)
-                .addContainerGap(96, Short.MAX_VALUE))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -158,6 +174,11 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jb_ingresarLogin.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jb_ingresarLogin.setText("Ingresar");
+        jb_ingresarLogin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_ingresarLoginMouseClicked(evt);
+            }
+        });
 
         jb_registro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jb_registro.setText("Registrarse");
@@ -231,15 +252,37 @@ public class FramePrincipal extends javax.swing.JFrame {
         String usuario = jtf_usuarioRegistro.getText();
         String contrasenia = jtf_contraRegistro.getText();
         String contrasenia2 = jtf_confirmarContra.getText();
-        if(registroValido(nombre, usuario, contrasenia, contrasenia2)){
-            this.setVisible(true);
-            this.setLocationRelativeTo(null);
-            jf_registro.setVisible(false);
-        }       
+        try{
+            if(registroValido(nombre, usuario, contrasenia, contrasenia2)){
+                if(jrb_alumno.isSelected()){
+                    alumno a = new alumno();
+                    a.setNombre(nombre);
+                    a.setIdEstudiante(Integer.parseInt(usuario));
+                    a.setContrasena(contrasenia);
+                    usuarios.add(a);
+                }else if(jrb_maestro.isSelected()){
+                    maestro a = new maestro();
+                    a.setNombre(nombre);
+                    a.setIdMaestro(Integer.parseInt(usuario));
+                    a.setContrasena(contrasenia);
+                    usuarios.add(a);
+                }
+                this.setVisible(true);
+                this.setLocationRelativeTo(null);
+                jf_registro.setVisible(false);
+            }
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Asegurese de que el usuario sea un número entero.");
+        }
+        
     }//GEN-LAST:event_jb_registrarseMouseClicked
 
+    private void jb_ingresarLoginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_ingresarLoginMouseClicked
+        
+    }//GEN-LAST:event_jb_ingresarLoginMouseClicked
+
     public boolean registroValido(String n, String u, String c, String c1){      
-        if(n.equals("") != true && u.equals("") != true && c.equals("") != true && c1.equals("") != true){
+        if(n.equals("") != true && u.equals("") != true && c.equals("") != true && c1.equals("") != true && (jrb_alumno.isSelected() || jrb_maestro.isSelected())){
             if(c.equals(c1)){
                 return true;
             }else{
@@ -287,6 +330,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bg_tipoUsuario;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -299,6 +343,8 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jb_registrarse;
     private javax.swing.JButton jb_registro;
     private javax.swing.JFrame jf_registro;
+    private javax.swing.JRadioButton jrb_alumno;
+    private javax.swing.JRadioButton jrb_maestro;
     private javax.swing.JTextField jtf_confirmarContra;
     private javax.swing.JTextField jtf_contraLogin;
     private javax.swing.JTextField jtf_contraRegistro;

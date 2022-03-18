@@ -10,19 +10,17 @@ package lab9p2_cesarnunez_juanmolina;
  * @author Hwan
  */
 public class usuario {
-    private String nombre,usuario,contrasena;
+    private String nombre,contrasena;
 
     public usuario() {
     }
 
-    public usuario(String nombre, String usuario, String contrasena) {
+    public usuario(String nombre, String contrasena) {
         this.nombre = nombre;
-        this.usuario = usuario;
         this.contrasena = contrasena;
     }
     
-    public usuario(String usuario, String contrasena) {
-        this.usuario = usuario;
+    public usuario(String contrasena) {
         this.contrasena = contrasena;
     }
 
@@ -52,6 +50,6 @@ public class usuario {
 
     @Override
     public String toString() {
-        return "usuario{" + "nombre=" + nombre + ", usuario=" + usuario + ", contrasena=" + contrasena + '}';
+        return "usuario{" + "nombre=" + nombre + ", contrasena=" + contrasena + '}';
     }
 }
