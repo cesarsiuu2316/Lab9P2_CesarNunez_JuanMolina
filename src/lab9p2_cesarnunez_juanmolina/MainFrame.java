@@ -27,18 +27,197 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jf_login = new javax.swing.JFrame();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel8 = new javax.swing.JLabel();
+        jtf_contraseniaLogin = new javax.swing.JTextField();
+        jtf_usuarioLogin = new javax.swing.JTextField();
+        jb_ingresar = new javax.swing.JButton();
+        jb_registro = new javax.swing.JButton();
+        jl_bg1 = new javax.swing.JLabel();
+        jf_registro = new javax.swing.JFrame();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel13 = new javax.swing.JLabel();
+        jtf_confirmarContrasenia = new javax.swing.JTextField();
+        jtf_nombreRegistro = new javax.swing.JTextField();
+        jb_registrarse = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jtf_usuarioRegistro = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        jtf_contraseniaRegistro = new javax.swing.JTextField();
+        jl_bg2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jl_bg = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jf_login.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jf_login.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("Contraseña: ");
+        jf_login.getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 380, 160, 30));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/unitec.jpg"))); // NOI18N
+        jf_login.getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 230, 60));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel7.setText("LOG IN");
+        jf_login.getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 90, 30));
+
+        jLabel5.setBackground(new java.awt.Color(58, 91, 123));
+        jLabel5.setOpaque(true);
+        jf_login.getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 180));
+
+        jSeparator2.setBackground(new java.awt.Color(208, 92, 95));
+        jSeparator2.setOpaque(true);
+        jf_login.getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 700, 20));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel8.setText("Usuario: ");
+        jf_login.getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 120, 30));
+
+        jtf_contraseniaLogin.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_contraseniaLogin.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_contraseniaLogin.setForeground(new java.awt.Color(51, 51, 51));
+        jf_login.getContentPane().add(jtf_contraseniaLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 380, 260, -1));
+
+        jtf_usuarioLogin.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_usuarioLogin.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_usuarioLogin.setForeground(new java.awt.Color(51, 51, 51));
+        jf_login.getContentPane().add(jtf_usuarioLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 260, -1));
+
+        jb_ingresar.setBackground(new java.awt.Color(169, 169, 169));
+        jb_ingresar.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_ingresar.setForeground(new java.awt.Color(51, 51, 51));
+        jb_ingresar.setText("Ingresar");
+        jf_login.getContentPane().add(jb_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 520, 220, 50));
+
+        jb_registro.setBackground(new java.awt.Color(169, 169, 169));
+        jb_registro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_registro.setForeground(new java.awt.Color(51, 51, 51));
+        jb_registro.setText("Registro");
+        jf_login.getContentPane().add(jb_registro, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 750, 220, 50));
+
+        jl_bg1.setBackground(new java.awt.Color(204, 204, 204));
+        jl_bg1.setOpaque(true);
+        jf_login.getContentPane().add(jl_bg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 820));
+
+        jf_registro.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jf_registro.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel9.setText("Confirmar contraseña: ");
+        jf_registro.getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 520, 280, 30));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/unitec.jpg"))); // NOI18N
+        jf_registro.getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, 230, 60));
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel11.setText("LOG IN");
+        jf_registro.getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 110, 90, 30));
+
+        jLabel12.setBackground(new java.awt.Color(58, 91, 123));
+        jLabel12.setOpaque(true);
+        jf_registro.getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 180));
+
+        jSeparator3.setBackground(new java.awt.Color(208, 92, 95));
+        jSeparator3.setOpaque(true);
+        jf_registro.getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 700, 20));
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel13.setText("Nombre completo: ");
+        jf_registro.getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 230, 30));
+
+        jtf_confirmarContrasenia.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_confirmarContrasenia.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_confirmarContrasenia.setForeground(new java.awt.Color(51, 51, 51));
+        jf_registro.getContentPane().add(jtf_confirmarContrasenia, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 520, 280, -1));
+
+        jtf_nombreRegistro.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_nombreRegistro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_nombreRegistro.setForeground(new java.awt.Color(51, 51, 51));
+        jf_registro.getContentPane().add(jtf_nombreRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 250, 280, -1));
+
+        jb_registrarse.setBackground(new java.awt.Color(169, 169, 169));
+        jb_registrarse.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jb_registrarse.setForeground(new java.awt.Color(51, 51, 51));
+        jb_registrarse.setText("Registrarse");
+        jf_registro.getContentPane().add(jb_registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 620, 220, 50));
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel14.setText("Usuario:");
+        jf_registro.getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 340, 110, 30));
+
+        jtf_usuarioRegistro.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_usuarioRegistro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_usuarioRegistro.setForeground(new java.awt.Color(51, 51, 51));
+        jf_registro.getContentPane().add(jtf_usuarioRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 340, 280, -1));
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel15.setText("Contraseña: ");
+        jf_registro.getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 150, 30));
+
+        jtf_contraseniaRegistro.setBackground(new java.awt.Color(187, 186, 186));
+        jtf_contraseniaRegistro.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jtf_contraseniaRegistro.setForeground(new java.awt.Color(51, 51, 51));
+        jf_registro.getContentPane().add(jtf_contraseniaRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 280, -1));
+
+        jl_bg2.setBackground(new java.awt.Color(204, 204, 204));
+        jl_bg2.setOpaque(true);
+        jf_registro.getContentPane().add(jl_bg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 740));
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/unitec.jpg"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 270, 60));
+
+        jLabel2.setBackground(new java.awt.Color(58, 91, 123));
+        jLabel2.setOpaque(true);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 130));
+
+        jSeparator1.setBackground(new java.awt.Color(208, 92, 95));
+        jSeparator1.setOpaque(true);
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1310, 10));
+
+        jButton1.setBackground(new java.awt.Color(163, 158, 158));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 180, 510, 210));
+
+        jButton2.setBackground(new java.awt.Color(163, 158, 158));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 460, 210));
+
+        jButton3.setBackground(new java.awt.Color(163, 158, 158));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 410, 510, 210));
+
+        jButton4.setBackground(new java.awt.Color(163, 158, 158));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 180, 210, 210));
+
+        jButton5.setBackground(new java.awt.Color(163, 158, 158));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 460, 210));
+
+        jl_bg.setBackground(new java.awt.Color(204, 204, 204));
+        jl_bg.setOpaque(true);
+        getContentPane().add(jl_bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1310, 820));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -79,5 +258,41 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JButton jb_ingresar;
+    private javax.swing.JButton jb_registrarse;
+    private javax.swing.JButton jb_registro;
+    private javax.swing.JFrame jf_login;
+    private javax.swing.JFrame jf_registro;
+    private javax.swing.JLabel jl_bg;
+    private javax.swing.JLabel jl_bg1;
+    private javax.swing.JLabel jl_bg2;
+    private javax.swing.JTextField jtf_confirmarContrasenia;
+    private javax.swing.JTextField jtf_contraseniaLogin;
+    private javax.swing.JTextField jtf_contraseniaRegistro;
+    private javax.swing.JTextField jtf_nombreRegistro;
+    private javax.swing.JTextField jtf_usuarioLogin;
+    private javax.swing.JTextField jtf_usuarioRegistro;
     // End of variables declaration//GEN-END:variables
 }
