@@ -187,10 +187,8 @@
         </Component>
       </SubComponents>
     </Container>
-<<<<<<< HEAD
     <Component class="javax.swing.ButtonGroup" name="bg_tipoUsuario">
     </Component>
-=======
     <Container class="javax.swing.JFrame" name="jf_examen">
 
       <Layout>
@@ -231,7 +229,6 @@
         </Component>
       </SubComponents>
     </Container>
->>>>>>> e7f9ce8878ac76830a477c39e528e43efcc21ec4
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>

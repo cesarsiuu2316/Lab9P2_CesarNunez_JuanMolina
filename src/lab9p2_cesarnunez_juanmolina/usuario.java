@@ -32,14 +32,6 @@ public class usuario {
         this.nombre = nombre;
     }
 
-    public String getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
-
     public String getContrasena() {
         return contrasena;
     }
