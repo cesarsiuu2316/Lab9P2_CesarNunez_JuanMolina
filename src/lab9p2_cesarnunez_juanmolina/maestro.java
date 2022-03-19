@@ -11,7 +11,7 @@ public class maestro extends usuario{
     }
 
     public maestro(int idMaestro, String nombre, String usuario, String contrasena) {
-        super(nombre, contrasena);
+        super(nombre, usuario, contrasena);
         this.idMaestro = idMaestro;
     }
 
@@ -25,7 +25,7 @@ public class maestro extends usuario{
 
     @Override
     public String toString() {
-        return super.toString() + "maestro{" + "idMaestro=" + idMaestro + '}';
+        return super.getNombre();
     }
     
     

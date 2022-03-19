@@ -57,7 +57,13 @@ public class FramePrincipal extends javax.swing.JFrame {
         jb_almacenarEnBD = new javax.swing.JButton();
         jb_clase = new javax.swing.JButton();
         jf_alumno = new javax.swing.JFrame();
+        jLabel30 = new javax.swing.JLabel();
+        jb_hacerExamen = new javax.swing.JButton();
+        jLabel31 = new javax.swing.JLabel();
         jf_maestro = new javax.swing.JFrame();
+        jLabel32 = new javax.swing.JLabel();
+        jb_agregarPreguntas = new javax.swing.JButton();
+        jLabel33 = new javax.swing.JLabel();
         jf_crud = new javax.swing.JFrame();
         jtp_crud = new javax.swing.JTabbedPane();
         jp_admin = new javax.swing.JPanel();
@@ -329,26 +335,90 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addContainerGap(78, Short.MAX_VALUE))
         );
 
+        jLabel30.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel30.setText("Alumno");
+
+        jb_hacerExamen.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_hacerExamen.setText("Hacer Examen");
+        jb_hacerExamen.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_hacerExamenMouseClicked(evt);
+            }
+        });
+
+        jLabel31.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_student_male_50px_1.png"))); // NOI18N
+
         javax.swing.GroupLayout jf_alumnoLayout = new javax.swing.GroupLayout(jf_alumno.getContentPane());
         jf_alumno.getContentPane().setLayout(jf_alumnoLayout);
         jf_alumnoLayout.setHorizontalGroup(
             jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 555, Short.MAX_VALUE)
+            .addGroup(jf_alumnoLayout.createSequentialGroup()
+                .addGroup(jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jf_alumnoLayout.createSequentialGroup()
+                        .addGap(187, 187, 187)
+                        .addComponent(jb_hacerExamen, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jf_alumnoLayout.createSequentialGroup()
+                        .addGap(224, 224, 224)
+                        .addComponent(jLabel30))
+                    .addGroup(jf_alumnoLayout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(jLabel31)))
+                .addContainerGap(198, Short.MAX_VALUE))
         );
         jf_alumnoLayout.setVerticalGroup(
             jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 427, Short.MAX_VALUE)
+            .addGroup(jf_alumnoLayout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
+                .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58)
+                .addComponent(jb_hacerExamen, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(102, 102, 102))
         );
+
+        jf_maestro.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel32.setText("Maestro");
+
+        jb_agregarPreguntas.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jb_agregarPreguntas.setText("Agregar Preguntas");
+        jb_agregarPreguntas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarPreguntasMouseClicked(evt);
+            }
+        });
+
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_teacher_50px.png"))); // NOI18N
 
         javax.swing.GroupLayout jf_maestroLayout = new javax.swing.GroupLayout(jf_maestro.getContentPane());
         jf_maestro.getContentPane().setLayout(jf_maestroLayout);
         jf_maestroLayout.setHorizontalGroup(
             jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGroup(jf_maestroLayout.createSequentialGroup()
+                .addGroup(jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jf_maestroLayout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(jLabel32))
+                    .addGroup(jf_maestroLayout.createSequentialGroup()
+                        .addGap(156, 156, 156)
+                        .addComponent(jb_agregarPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jf_maestroLayout.createSequentialGroup()
+                        .addGap(223, 223, 223)
+                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(159, Short.MAX_VALUE))
         );
         jf_maestroLayout.setVerticalGroup(
             jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 455, Short.MAX_VALUE)
+            .addGroup(jf_maestroLayout.createSequentialGroup()
+                .addGap(71, 71, 71)
+                .addComponent(jLabel32)
+                .addGap(50, 50, 50)
+                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45)
+                .addComponent(jb_agregarPreguntas, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         jf_crud.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1040,6 +1110,11 @@ public class FramePrincipal extends javax.swing.JFrame {
             usuarios.add(new alumno(Integer.parseInt(jtf_idAlumno.getText()), jtf_carreraAlumno.getText(), jtf_nombreAlumno.getText(), jtf_usuarioAlumno.getText(), jtf_contraAlumno.getText()));
             JOptionPane.showMessageDialog(null, "El alumno se agregó con éxito.");
             state();
+            jtf_idAlumno.setText("");
+            jtf_carreraAlumno.setText("");
+            jtf_nombreAlumno.setText("");
+            jtf_usuarioAlumno.setText("");
+            jtf_contraAlumno.setText("");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error.");
         }        
@@ -1153,12 +1228,30 @@ public class FramePrincipal extends javax.swing.JFrame {
         int id;
         try{
             id = Integer.parseInt(jtf_idClase.getText());
+            clase c = new clase();
+            c.setIdMaestro(m.getIdMaestro());
+            c.setIdClase(id);
+            c.setNombreClase(nombre);
+            clases.add(c);
             JOptionPane.showMessageDialog(null, "Se creó la clase con éxito!");
+            jtf_nombreClase.setText("");
+            jtf_idClase.setText("");
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Ocurrió un error!");
         }
         
     }//GEN-LAST:event_jb_crearClaseMouseClicked
+
+    private void jb_hacerExamenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_hacerExamenMouseClicked
+        jf_examen.setVisible(true);
+        jf_examen.pack();
+        jf_examen.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jb_hacerExamenMouseClicked
+
+    private void jb_agregarPreguntasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarPreguntasMouseClicked
+        jf_examenmaestro e = new jf_examenmaestro();
+        e.setVisible(true);
+    }//GEN-LAST:event_jb_agregarPreguntasMouseClicked
 
     private boolean registroValido(String n, String u, String c, String c1){      
         if(n.equals("") != true && u.equals("") != true && c.equals("") != true && c1.equals("") != true && (jrb_alumno.isSelected() || jrb_maestro.isSelected())){
@@ -1291,6 +1384,10 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1299,12 +1396,14 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jb_agregarAlumno;
+    private javax.swing.JButton jb_agregarPreguntas;
     private javax.swing.JButton jb_almacenarEnBD;
     private javax.swing.JButton jb_clase;
     private javax.swing.JButton jb_crearClase;
     private javax.swing.JButton jb_crearExamen;
     private javax.swing.JButton jb_crudAdmin;
     private javax.swing.JButton jb_eliminarAlumno;
+    private javax.swing.JButton jb_hacerExamen;
     private javax.swing.JButton jb_ingresarLogin;
     private javax.swing.JButton jb_modificarAdmin;
     private javax.swing.JButton jb_modificarAlumno;
