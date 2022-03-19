@@ -20,6 +20,7 @@ public class usuario {
         this.contrasena = contrasena;
     }
     public usuario(String nombre, String usuario, String contrasena) {
+        this.nombre = nombre;
         this.usuario = usuario;
         this.contrasena = contrasena;
     }
@@ -52,7 +53,6 @@ public class usuario {
         return usuario;
     }    
     
-
     @Override
     public String toString() {
         return nombre;

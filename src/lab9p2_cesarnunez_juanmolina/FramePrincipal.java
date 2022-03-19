@@ -927,6 +927,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         jf_crud.setVisible(true);
         jf_crud.pack();
         jf_crud.setLocationRelativeTo(null);
+        state();
     }//GEN-LAST:event_jb_crudAdminMouseClicked
 
     private void jb_agregarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarAlumnoMouseClicked
@@ -940,88 +941,52 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_agregarAlumnoMouseClicked
 
     private void jtp_crudAlumnosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jtp_crudAlumnosStateChanged
-       /*if(jtp_crud.getSelectedIndex() >= 0){
-            if(jtp_crud.getSelectedIndex() == 1){
-                System.out.println("ho");
-                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        cb.addElement(u);
-                        System.out.println("h");
-                    }
-                }
-                //jcb_alumnoModificar.setModel(cb);
-            }else if(jtp_crud.getSelectedIndex() == 2){
-                jta_listarAlumnos.setText("");
-                String s = "";
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        s += "Nombre: " + u.getNombre() + ", ID: " + ((alumno) u).getIdEstudiante() + "\n";
-                    }
-                }
-                jta_listarAlumnos.setText(s);
-            }else if(jtp_crud.getSelectedIndex() == 3){
-                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
-                
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        cb.addElement(u.toString());
-                    }
-                }
-                //jcb_eliminarAlumnos.setModel(cb);
-            }
-        }*/
+       
     }//GEN-LAST:event_jtp_crudAlumnosStateChanged
 
     private void state(){
         if(jtp_crud.getSelectedIndex() >= 0){
-            if(jtp_crud.getSelectedIndex() == 1){
-                System.out.println("ho");
-                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        cb.addElement(u);
-                        System.out.println("h");
-                    }
-                }
-                //jcb_alumnoModificar.setModel(cb);
-            }else if(jtp_crud.getSelectedIndex() == 2){
-                jta_listarAlumnos.setText("");
-                String s = "";
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        s += "Nombre: " + u.getNombre() + ", ID: " + ((alumno) u).getIdEstudiante() + "\n";
-                    }
-                }
-                jta_listarAlumnos.setText(s);
-            }else if(jtp_crud.getSelectedIndex() == 3){
-                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
-                
-                for (usuario u : usuarios) {
-                    if(u instanceof alumno){
-                        cb.addElement(u.toString());
-                    }
-                }
-                //jcb_eliminarAlumnos.setModel(cb);
-            }
+             DefaultComboBoxModel cb = new DefaultComboBoxModel();
+             for (usuario u : usuarios) {
+                 if(u instanceof alumno){
+                     cb.addElement(u);
+                 }
+             }
+             jcb_alumnoModificar.setModel(cb);
+             jta_listarAlumnos.setText("");
+             String s = "";
+             for (usuario u : usuarios) {
+                 if(u instanceof alumno){
+                     s += "Nombre: " + u.getNombre() + ", ID: " + ((alumno) u).getIdEstudiante() + "\n";
+                 }
+             }
+             jta_listarAlumnos.setText(s);
+             DefaultComboBoxModel cbx = new DefaultComboBoxModel();                
+             for (usuario u : usuarios) {
+                 if(u instanceof alumno){
+                     cbx.addElement(u);
+                 }
+             }
+             jcb_eliminarAlumnos.setModel(cbx);            
         }
     }
     
     private void jb_modificarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_modificarAlumnoMouseClicked
         try{
             for (usuario u : usuarios) {
-            if(u instanceof alumno){
-                if(u.getNombre().equals( ((alumno) jcb_alumnoModificar.getSelectedItem()).getNombre())){
-                    u = new alumno(Integer.parseInt(jtf_idAlumno1.getText()), jtf_carreraAlumno1.getText(), jtf_nombreAlumno1.getText(), jtf_usuarioAlumno1.getText(), jtf_contraAlumno1.getText());
-                    JOptionPane.showMessageDialog(null, "El alumno se modficó con éxito.");
-                    jtf_idAlumno1.setText("");
-                    jtf_carreraAlumno1.setText("");
-                    jtf_nombreAlumno1.setText("");
-                    jtf_usuarioAlumno1.setText("");
-                    jtf_contraAlumno1.setText("");
+                if(u instanceof alumno){
+                    if(u.getNombre().equals( ((alumno) jcb_alumnoModificar.getSelectedItem()).getNombre())){
+                        u = new alumno(Integer.parseInt(jtf_idAlumno1.getText()), jtf_carreraAlumno1.getText(), jtf_nombreAlumno1.getText(), jtf_usuarioAlumno1.getText(), jtf_contraAlumno1.getText());
+                        JOptionPane.showMessageDialog(null, "El alumno se modficó con éxito.");
+                        jtf_idAlumno1.setText("");
+                        jtf_carreraAlumno1.setText("");
+                        jtf_nombreAlumno1.setText("");
+                        jtf_usuarioAlumno1.setText("");
+                        jtf_contraAlumno1.setText("");
+                    }
                 }
             }
-        }
+            state();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error.");
         }
@@ -1037,6 +1002,7 @@ public class FramePrincipal extends javax.swing.JFrame {
                 }
             }            
         }
+        state();
     }//GEN-LAST:event_jb_eliminarAlumnoMouseClicked
 
     private void jb_modificarAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_modificarAdminMouseClicked

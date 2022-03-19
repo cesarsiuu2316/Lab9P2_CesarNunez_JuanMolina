@@ -25,7 +25,7 @@ public class alumno extends usuario{
     }
 
     public alumno(int idEstudiante, String carrera, String nombre, String usuario, String contrasena) {
-        super(nombre, contrasena);
+        super(nombre, usuario, contrasena);
         this.idEstudiante = idEstudiante;
         this.carrera = carrera;
     }
@@ -53,5 +53,10 @@ public class alumno extends usuario{
     public void setClases(ArrayList<clase> clases) {
         this.clases = clases;
     }    
+
+    @Override
+    public String toString() {
+        return super.getNombre();
+    }
     
 }
