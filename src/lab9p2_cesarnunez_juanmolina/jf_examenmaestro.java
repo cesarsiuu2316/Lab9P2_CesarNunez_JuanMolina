@@ -107,6 +107,11 @@ public class jf_examenmaestro extends javax.swing.JFrame {
         f5.setText("FALSO");
 
         v1.setText("VERDADERO");
+        v1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                v1ActionPerformed(evt);
+            }
+        });
 
         f1.setText("FALSO");
         f1.addActionListener(new java.awt.event.ActionListener() {
@@ -254,47 +259,43 @@ public class jf_examenmaestro extends javax.swing.JFrame {
         pregTemp = new ArrayList();
         preguntas temp = new preguntas();
         
-        if(tempClase.getExamenes()){
-            
-        }
-        
-        
-        if(v1.isSelected()){
-            pregTemp.add(new preguntas(p1.getText(),true));
-        } else if (f1.isSelected()){
-            pregTemp.add(new preguntas(p1.getText(),false));
-        }
-        
-        if(v2.isSelected()){
-            pregTemp.add(new preguntas(p2.getText(),true));
-        } else if (f2.isSelected()){
-            pregTemp.add(new preguntas(p2.getText(),false));
-        }
-        
-        if(v3.isSelected()){
-            pregTemp.add(new preguntas(p3.getText(),true));
-        } else if (f3.isSelected()){
-            pregTemp.add(new preguntas(p3.getText(),false));
-        }
-        
-        if(v4.isSelected()){
-            pregTemp.add(new preguntas(p4.getText(),true));
-        } else if (f4.isSelected()){
-            pregTemp.add(new preguntas(p4.getText(),false));
-        }
-        
-        if(v5.isSelected()){
-            pregTemp.add(new preguntas(p5.getText(),true));
-        } else if (f5.isSelected()){
-            pregTemp.add(new preguntas(p5.getText(),false));
-        }
-        
-        
-        try {
-            clasesCombo
-            tempClase.getExamenes().add(new examen(pregTemp));
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error.");
+        if(((examen)clasesCombo.getSelectedItem()).getExamen().isEmpty()){
+            if(v1.isSelected()){
+                pregTemp.add(new preguntas(p1.getText(),true));
+            } else if (f1.isSelected()){
+                pregTemp.add(new preguntas(p1.getText(),false));
+            }
+
+            if(v2.isSelected()){
+                pregTemp.add(new preguntas(p2.getText(),true));
+            } else if (f2.isSelected()){
+                pregTemp.add(new preguntas(p2.getText(),false));
+            }
+
+            if(v3.isSelected()){
+                pregTemp.add(new preguntas(p3.getText(),true));
+            } else if (f3.isSelected()){
+                pregTemp.add(new preguntas(p3.getText(),false));
+            }
+
+            if(v4.isSelected()){
+                pregTemp.add(new preguntas(p4.getText(),true));
+            } else if (f4.isSelected()){
+                pregTemp.add(new preguntas(p4.getText(),false));
+            }
+
+            if(v5.isSelected()){
+                pregTemp.add(new preguntas(p5.getText(),true));
+            } else if (f5.isSelected()){
+                pregTemp.add(new preguntas(p5.getText(),false));
+            }
+
+
+            try {
+                ((examen)clasesCombo.getSelectedItem()).setExamen(pregTemp);
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error.");
+            }
         }
     }//GEN-LAST:event_confirmarPreguntasActionPerformed
 
@@ -317,6 +318,10 @@ public class jf_examenmaestro extends javax.swing.JFrame {
     private void p1PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_p1PropertyChange
         // TODO add your handling code here:
     }//GEN-LAST:event_p1PropertyChange
+
+    private void v1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v1ActionPerformed
+       
+    }//GEN-LAST:event_v1ActionPerformed
 
     /**
      * @param args the command line arguments
