@@ -1096,7 +1096,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_ingresarLoginMouseClicked
 
     private void jb_crearExamenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearExamenMouseClicked
-        jf_adminexamen a = new jf_adminexamen(clases);
+        jf_adminexamen a = new jf_adminexamen();
         a.setVisible(true);
         a.pack();
         a.setLocationRelativeTo(null);
@@ -1236,7 +1236,7 @@ public class FramePrincipal extends javax.swing.JFrame {
             c.setIdMaestro(m.getIdMaestro());
             c.setIdClase(id);
             c.setNombreClase(nombre);
-            clases.add(c);
+            clases.add(new clase(nombre, m.getIdMaestro(), id));
             JOptionPane.showMessageDialog(null, "Se creó la clase con éxito!");
             jtf_nombreClase.setText("");
             jtf_idClase.setText("");

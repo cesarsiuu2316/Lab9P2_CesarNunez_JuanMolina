@@ -19,7 +19,7 @@ public class clase {
     public clase() {
     }
 
-    public clase(String nombreClase, int idClase, int idMaestro, ArrayList<examen> examenes) {
+    public clase(String nombreClase, int idClase, int idMaestro) {
         this.nombreClase = nombreClase;
         this.idClase = idClase;
         this.examenes = examenes;
