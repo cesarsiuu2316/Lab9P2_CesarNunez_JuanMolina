@@ -291,6 +291,7 @@ public class jf_examenmaestro extends javax.swing.JFrame {
         
         
         try {
+            clasesCombo
             tempClase.getExamenes().add(new examen(pregTemp));
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Error.");
