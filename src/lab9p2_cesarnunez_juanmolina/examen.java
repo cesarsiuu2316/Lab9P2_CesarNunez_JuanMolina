@@ -51,6 +51,11 @@ public class examen {
     public void setNota(int nota) {
         this.nota = nota;
     }
+
+    @Override
+    public String toString() {
+        return ""+idExamen;
+    }
     
     
     
