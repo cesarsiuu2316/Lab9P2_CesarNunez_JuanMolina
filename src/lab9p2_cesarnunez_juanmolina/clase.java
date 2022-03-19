@@ -13,18 +13,15 @@ import java.util.ArrayList;
  */
 public class clase {
     private String nombreClase;
-    private int idClase,idMaestro,idExamen1,idExamen2;
+    private int idClase,idMaestro;
     private ArrayList<examen> examenes;
 
     public clase() {
     }
 
-    public clase(String nombreClase, int idClase, int idMaestro, int idExamen1, int idExamen2, ArrayList<examen> examenes) {
+    public clase(String nombreClase, int idClase, int idMaestro, ArrayList<examen> examenes) {
         this.nombreClase = nombreClase;
         this.idClase = idClase;
-        this.idMaestro = idMaestro;
-        this.idExamen1 = idExamen1;
-        this.idExamen2 = idExamen2;
         this.examenes = examenes;
     }
 
@@ -52,22 +49,6 @@ public class clase {
         this.idMaestro = idMaestro;
     }
 
-    public int getIdExamen1() {
-        return idExamen1;
-    }
-
-    public void setIdExamen1(int idExamen1) {
-        this.idExamen1 = idExamen1;
-    }
-
-    public int getIdExamen2() {
-        return idExamen2;
-    }
-
-    public void setIdExamen2(int idExamen2) {
-        this.idExamen2 = idExamen2;
-    }
-
     public ArrayList<examen> getExamenes() {
         return examenes;
     }
@@ -78,6 +59,6 @@ public class clase {
 
     @Override
     public String toString() {
-        return "clase{" + "nombreClase=" + nombreClase + ", idClase=" + idClase + ", idMaestro=" + idMaestro + ", idExamen1=" + idExamen1 + ", idExamen2=" + idExamen2 + ", examenes=" + examenes + '}';
+        return "clase{" + "nombreClase=" + nombreClase + ", idClase=" + idClase + ", idMaestro=" + idMaestro + ", examenes=" + examenes + '}';
     }
 }

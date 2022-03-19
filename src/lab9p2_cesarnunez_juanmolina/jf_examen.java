@@ -1,9 +1,13 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 package lab9p2_cesarnunez_juanmolina;
+
+import java.util.HashSet;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -12,14 +16,18 @@ package lab9p2_cesarnunez_juanmolina;
 public class jf_examen extends javax.swing.JFrame {
 
     private alumno usuarioExamen = new alumno();
+    adminExamen ae;
     public jf_examen() {
         initComponents();
         
         for (clase temp : usuarioExamen.getClases()) {
             clasesCombo.addItem(temp.getNombreClase());
         }
+        
+        
+        
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -47,20 +55,20 @@ public class jf_examen extends javax.swing.JFrame {
         p3 = new javax.swing.JLabel();
         p4 = new javax.swing.JLabel();
         p5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
-        jRadioButton7 = new javax.swing.JRadioButton();
-        jRadioButton8 = new javax.swing.JRadioButton();
-        jRadioButton9 = new javax.swing.JRadioButton();
-        jRadioButton10 = new javax.swing.JRadioButton();
+        v1 = new javax.swing.JRadioButton();
+        f1 = new javax.swing.JRadioButton();
+        v2 = new javax.swing.JRadioButton();
+        f2 = new javax.swing.JRadioButton();
+        v3 = new javax.swing.JRadioButton();
+        f3 = new javax.swing.JRadioButton();
+        v4 = new javax.swing.JRadioButton();
+        f4 = new javax.swing.JRadioButton();
+        v5 = new javax.swing.JRadioButton();
+        f5 = new javax.swing.JRadioButton();
         finalizarExamen = new javax.swing.JButton();
         seleccionarExamen = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Tiempo:");
 
@@ -95,45 +103,45 @@ public class jf_examen extends javax.swing.JFrame {
 
         p5.setText("PREGUNTA 5");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("VERDADERO");
+        buttonGroup1.add(v1);
+        v1.setText("VERDADERO");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("FALSO");
-        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(f1);
+        f1.setText("FALSO");
+        f1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton2ActionPerformed(evt);
+                f1ActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton3);
-        jRadioButton3.setText("VERDADERO");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup2.add(v2);
+        v2.setText("VERDADERO");
+        v2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                v2ActionPerformed(evt);
             }
         });
 
-        buttonGroup2.add(jRadioButton4);
-        jRadioButton4.setText("FALSO");
+        buttonGroup2.add(f2);
+        f2.setText("FALSO");
 
-        buttonGroup3.add(jRadioButton5);
-        jRadioButton5.setText("VERDADERO");
+        buttonGroup3.add(v3);
+        v3.setText("VERDADERO");
 
-        buttonGroup3.add(jRadioButton6);
-        jRadioButton6.setText("FALSO");
+        buttonGroup3.add(f3);
+        f3.setText("FALSO");
 
-        buttonGroup4.add(jRadioButton7);
-        jRadioButton7.setText("VERDADERO");
+        buttonGroup4.add(v4);
+        v4.setText("VERDADERO");
 
-        buttonGroup4.add(jRadioButton8);
-        jRadioButton8.setText("FALSO");
+        buttonGroup4.add(f4);
+        f4.setText("FALSO");
 
-        buttonGroup5.add(jRadioButton9);
-        jRadioButton9.setText("VERDADERO");
+        buttonGroup5.add(v5);
+        v5.setText("VERDADERO");
 
-        buttonGroup5.add(jRadioButton10);
-        jRadioButton10.setText("FALSO");
+        buttonGroup5.add(f5);
+        f5.setText("FALSO");
 
         finalizarExamen.setText("FINALIZAR");
         finalizarExamen.addActionListener(new java.awt.event.ActionListener() {
@@ -173,8 +181,8 @@ public class jf_examen extends javax.swing.JFrame {
                         .addComponent(p1, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton1)
-                            .addComponent(jRadioButton2)))
+                            .addComponent(v1)
+                            .addComponent(f1)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,14 +192,14 @@ public class jf_examen extends javax.swing.JFrame {
                             .addComponent(p2, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(60, 60, 60)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton10)
-                            .addComponent(jRadioButton8)
-                            .addComponent(jRadioButton6)
-                            .addComponent(jRadioButton4)
-                            .addComponent(jRadioButton3)
-                            .addComponent(jRadioButton5)
-                            .addComponent(jRadioButton7)
-                            .addComponent(jRadioButton9)))
+                            .addComponent(f5)
+                            .addComponent(f4)
+                            .addComponent(f3)
+                            .addComponent(f2)
+                            .addComponent(v2)
+                            .addComponent(v3)
+                            .addComponent(v4)
+                            .addComponent(v5)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(322, 322, 322)
                         .addComponent(finalizarExamen))
@@ -231,34 +239,34 @@ public class jf_examen extends javax.swing.JFrame {
                         .addGap(48, 48, 48)
                         .addComponent(examenID, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(jRadioButton1))
+                        .addComponent(v1))
                     .addComponent(p1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton2)
+                .addComponent(f1)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(p2)
-                    .addComponent(jRadioButton3))
+                    .addComponent(v2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton4)
+                .addComponent(f2)
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p3)
-                    .addComponent(jRadioButton5))
+                    .addComponent(v3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton6)
+                .addComponent(f3)
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p4)
-                    .addComponent(jRadioButton7))
+                    .addComponent(v4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton8)
+                .addComponent(f4)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(p5)
-                    .addComponent(jRadioButton9))
+                    .addComponent(v5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jRadioButton10)
+                .addComponent(f5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                 .addComponent(finalizarExamen)
                 .addGap(39, 39, 39))
@@ -291,75 +299,114 @@ public class jf_examen extends javax.swing.JFrame {
     }//GEN-LAST:event_seleccionarClaseActionPerformed
 
     private examen tempExamen = new examen();
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void v2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_v2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_v2ActionPerformed
 
-    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+    private void f1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2ActionPerformed
+    }//GEN-LAST:event_f1ActionPerformed
 
+    
+    
     private void seleccionarExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionarExamenActionPerformed
+        boolean estado = true;
+        
         for (examen temp : tempClase.getExamenes()) {
             if(examenCombo.getSelectedItem().equals(temp.getIdExamen())){
-                tempExamen = tempClase.getExamenes().get(tempClase.getExamenes().indexOf(temp));
-                break;
+                if(temp.getNota()==0){
+                    tempExamen = tempClase.getExamenes().get(tempClase.getExamenes().indexOf(temp));
+                    break;
+                } else {
+                    estado = false;
+                    JOptionPane.showMessageDialog(null,"Ya has tomado este examen! Escoge otro.");
+                    break;
+                }
             }
         }
+        
+        if(estado){
+            examenID.setText(""+tempExamen.getIdExamen());
+        
+            p1.setText(tempExamen.getExamen().get(0).getPregunta());
+            p2.setText(tempExamen.getExamen().get(1).getPregunta());
+            p3.setText(tempExamen.getExamen().get(2).getPregunta());
+            p4.setText(tempExamen.getExamen().get(3).getPregunta());
+            p5.setText(tempExamen.getExamen().get(4).getPregunta());
 
-        examenID.setText(""+tempExamen.getIdExamen());
+            examenCombo.setEnabled(false);
+            seleccionarExamen.setEnabled(false);
+        }
         
-        p1.setText(tempExamen.getExamen().get(0).getPregunta());
-        p2.setText(tempExamen.getExamen().get(1).getPregunta());
-        p3.setText(tempExamen.getExamen().get(2).getPregunta());
-        p4.setText(tempExamen.getExamen().get(3).getPregunta());
-        p5.setText(tempExamen.getExamen().get(4).getPregunta());
-        
-        examenCombo.setEnabled(false);
-        seleccionarExamen.setEnabled(false);
+        ae = new adminExamen(tiempoLabel,notificacionLabel);
+        hilo = new Thread(ae);
+        hilo.run();
     }//GEN-LAST:event_seleccionarExamenActionPerformed
 
     private void finalizarExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finalizarExamenActionPerformed
         int counter = 0;
         
-        if(buttonGroup1.isSelected() && )
+        if(v1.isSelected()){
+            if(tempExamen.getExamen().get(0).isRespuesta()==true){
+                counter += 5;
+            } 
+        } else if (f1.isSelected()){
+            if(tempExamen.getExamen().get(0).isRespuesta()==false){
+                counter += 5;
+            } 
+        }
         
+        if(v2.isSelected()){
+            if(tempExamen.getExamen().get(1).isRespuesta()==true){
+                counter += 5;
+            } 
+        } else if (f2.isSelected()){
+            if(tempExamen.getExamen().get(1).isRespuesta()==false){
+                counter += 5;
+            } 
+        }
+        
+        if(v3.isSelected()){
+            if(tempExamen.getExamen().get(2).isRespuesta()==true){
+                counter += 5;
+            } 
+        } else if (f3.isSelected()){
+            if(tempExamen.getExamen().get(2).isRespuesta()==false){
+                counter += 5;
+            } 
+        }
+        
+        if(v4.isSelected()){
+            if(tempExamen.getExamen().get(3).isRespuesta()==true){
+                counter += 5;
+            } 
+        } else if (f4.isSelected()){
+            if(tempExamen.getExamen().get(3).isRespuesta()==false){
+                counter += 5;
+            } 
+        }
+        
+        if(v5.isSelected()){
+            if(tempExamen.getExamen().get(4).isRespuesta()==true){
+                counter += 5;
+            } 
+        } else if (f5.isSelected()){
+            if(tempExamen.getExamen().get(4).isRespuesta()==false){
+                counter += 5;
+            } 
+        }
+        
+        
+        JOptionPane.showMessageDialog(null, "Nota Final: "+counter+"/25");
+        tempExamen.setNota(counter);
+        ae.setEstado(false);
+        dispose();
     }//GEN-LAST:event_finalizarExamenActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(jf_examen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(jf_examen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(jf_examen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(jf_examen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new jf_examen().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
@@ -370,19 +417,14 @@ public class jf_examen extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> clasesCombo;
     private javax.swing.JComboBox<String> examenCombo;
     private javax.swing.JLabel examenID;
+    private javax.swing.JRadioButton f1;
+    private javax.swing.JRadioButton f2;
+    private javax.swing.JRadioButton f3;
+    private javax.swing.JRadioButton f4;
+    private javax.swing.JRadioButton f5;
     private javax.swing.JButton finalizarExamen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton10;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JRadioButton jRadioButton7;
-    private javax.swing.JRadioButton jRadioButton8;
-    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JLabel notificacionLabel;
     private javax.swing.JLabel p1;
     private javax.swing.JLabel p2;
@@ -392,9 +434,16 @@ public class jf_examen extends javax.swing.JFrame {
     private javax.swing.JButton seleccionarClase;
     private javax.swing.JButton seleccionarExamen;
     private javax.swing.JLabel tiempoLabel;
+    private javax.swing.JRadioButton v1;
+    private javax.swing.JRadioButton v2;
+    private javax.swing.JRadioButton v3;
+    private javax.swing.JRadioButton v4;
+    private javax.swing.JRadioButton v5;
     // End of variables declaration//GEN-END:variables
 
     public void jf_examen(alumno temp ){
         this.usuarioExamen = temp;
     }
+    
+    Thread hilo;
 }

@@ -14,7 +14,7 @@
     </Component>
   </NonVisualComponents>
   <Properties>
-    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="defaultCloseOperation" type="int" value="2"/>
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
@@ -58,8 +58,8 @@
                       <Component id="p1" min="-2" pref="450" max="-2" attributes="0"/>
                       <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                          <Component id="v1" min="-2" max="-2" attributes="0"/>
+                          <Component id="f1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -72,14 +72,14 @@
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton7" min="-2" max="-2" attributes="0"/>
-                          <Component id="jRadioButton9" min="-2" max="-2" attributes="0"/>
+                          <Component id="f5" min="-2" max="-2" attributes="0"/>
+                          <Component id="f4" min="-2" max="-2" attributes="0"/>
+                          <Component id="f3" min="-2" max="-2" attributes="0"/>
+                          <Component id="f2" min="-2" max="-2" attributes="0"/>
+                          <Component id="v2" min="-2" max="-2" attributes="0"/>
+                          <Component id="v3" min="-2" max="-2" attributes="0"/>
+                          <Component id="v4" min="-2" max="-2" attributes="0"/>
+                          <Component id="v5" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -133,40 +133,40 @@
                       <EmptySpace min="48" pref="48" max="-2" attributes="0"/>
                       <Component id="examenID" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-                      <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                      <Component id="v1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Component id="p1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+              <Component id="f1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="p2" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton3" min="-2" max="-2" attributes="0"/>
+                  <Component id="v2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton4" min="-2" max="-2" attributes="0"/>
+              <Component id="f2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="p3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="v3" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton6" min="-2" max="-2" attributes="0"/>
+              <Component id="f3" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="p4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="v4" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton8" min="-2" max="-2" attributes="0"/>
+              <Component id="f4" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="p5" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton9" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="v5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jRadioButton10" min="-2" max="-2" attributes="0"/>
+              <Component id="f5" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="61" max="32767" attributes="0"/>
               <Component id="finalizarExamen" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
@@ -255,7 +255,7 @@
         <Property name="text" type="java.lang.String" value="PREGUNTA 5"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="v1">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
@@ -263,7 +263,7 @@
         <Property name="text" type="java.lang.String" value="VERDADERO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="f1">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
@@ -271,10 +271,10 @@
         <Property name="text" type="java.lang.String" value="FALSO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="f1ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton3">
+    <Component class="javax.swing.JRadioButton" name="v2">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup2"/>
@@ -282,10 +282,10 @@
         <Property name="text" type="java.lang.String" value="VERDADERO"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="v2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton4">
+    <Component class="javax.swing.JRadioButton" name="f2">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup2"/>
@@ -293,7 +293,7 @@
         <Property name="text" type="java.lang.String" value="FALSO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton5">
+    <Component class="javax.swing.JRadioButton" name="v3">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup3"/>
@@ -301,7 +301,7 @@
         <Property name="text" type="java.lang.String" value="VERDADERO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton6">
+    <Component class="javax.swing.JRadioButton" name="f3">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup3"/>
@@ -309,7 +309,7 @@
         <Property name="text" type="java.lang.String" value="FALSO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton7">
+    <Component class="javax.swing.JRadioButton" name="v4">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup4"/>
@@ -317,7 +317,7 @@
         <Property name="text" type="java.lang.String" value="VERDADERO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton8">
+    <Component class="javax.swing.JRadioButton" name="f4">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup4"/>
@@ -325,7 +325,7 @@
         <Property name="text" type="java.lang.String" value="FALSO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton9">
+    <Component class="javax.swing.JRadioButton" name="v5">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup5"/>
@@ -333,7 +333,7 @@
         <Property name="text" type="java.lang.String" value="VERDADERO"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton10">
+    <Component class="javax.swing.JRadioButton" name="f5">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup5"/>
