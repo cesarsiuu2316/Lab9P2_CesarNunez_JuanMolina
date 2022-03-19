@@ -1095,6 +1095,8 @@ public class FramePrincipal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jb_ingresarLoginMouseClicked
 
+    
+    
     private void jb_crearExamenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearExamenMouseClicked
         jf_adminexamen a = new jf_adminexamen();
         a.setVisible(true);

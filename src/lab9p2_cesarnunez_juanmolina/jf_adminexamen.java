@@ -15,9 +15,13 @@ import javax.swing.JOptionPane;
  */
 public class jf_adminexamen extends javax.swing.JFrame {
 
-    private ArrayList<usuario> au = new ArrayList();
+    private ArrayList<clase> au = new ArrayList();
+    FramePrincipal fr = new FramePrincipal();
+    
     public jf_adminexamen() {
         initComponents();
+        System.out.println(fr.getClases());
+        au = fr.getClases();
         state();
     }
 
@@ -149,18 +153,10 @@ public class jf_adminexamen extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_agregarExamenActionPerformed
 
-    public void jf_adminexamen(ArrayList<usuario> temp){
-        this.au=temp;
-    }
-    
     public void state(){
         DefaultComboBoxModel cb = new DefaultComboBoxModel();
-        for (usuario u : au) {
-            if(u instanceof alumno){
-                for (clase x : ((alumno) u).getClases()) {
-                    cb.addElement(x);
-                }
-            }
+        for (clase u : au) {
+            cb.addElement(u);
         }
         clasesCombo.setModel(cb); 
     }
