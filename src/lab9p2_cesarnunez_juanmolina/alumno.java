@@ -19,17 +19,15 @@ public class alumno extends usuario{
     public alumno() {
     }
 
-    public alumno(int idEstudiante, String carrera, ArrayList<clase> clases) {
+    public alumno(int idEstudiante, String carrera) {
         this.idEstudiante = idEstudiante;
         this.carrera = carrera;
-        this.clases = clases;
     }
 
-    public alumno(int idEstudiante, String carrera, ArrayList<clase> clases, String nombre, String usuario, String contrasena) {
+    public alumno(int idEstudiante, String carrera, String nombre, String usuario, String contrasena) {
         super(nombre, contrasena);
         this.idEstudiante = idEstudiante;
         this.carrera = carrera;
-        this.clases = clases;
     }
 
     
@@ -60,7 +58,7 @@ public class alumno extends usuario{
 
     @Override
     public String toString() {
-        return  super.toString() + "alumno{" + "idEstudiante=" + idEstudiante + ", carrera=" + carrera + ", clases=" + clases + '}';
+        return super.getNombre();
     }
     
     
