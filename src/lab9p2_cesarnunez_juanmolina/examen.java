@@ -56,8 +56,4 @@ public class examen {
     public String toString() {
         return ""+idExamen;
     }
-    
-    
-    
-    
 }

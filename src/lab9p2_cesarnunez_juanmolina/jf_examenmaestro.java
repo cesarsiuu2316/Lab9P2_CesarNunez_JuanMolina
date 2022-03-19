@@ -7,6 +7,7 @@ package lab9p2_cesarnunez_juanmolina;
 
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -15,6 +16,7 @@ import javax.swing.DefaultComboBoxModel;
 public class jf_examenmaestro extends javax.swing.JFrame {
 
     ArrayList<usuario> au = new ArrayList();
+    ArrayList<preguntas> pregTemp = new ArrayList();
     maestro tempMaestro;
     clase tempClase;
     public void jf_examenmaestro(ArrayList<usuario> temp, maestro m) {
@@ -249,24 +251,49 @@ public class jf_examenmaestro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void confirmarPreguntasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmarPreguntasActionPerformed
-        boolean integer = false;
-        if(!integer){
-            try{
-                Integer.parseInt(idExamen.getText());
-            }catch(Exception e){
-                JOptionPane.showMessageDialog(null, "El ID debe ser un numero.");
-            }
-            integer = true;
+        pregTemp = new ArrayList();
+        preguntas temp = new preguntas();
+        
+        if(tempClase.getExamenes()){
+            
         }
-
-        if(integer){
-            try {
-                ((clase) clasesCombo.getSelectedItem()).getExamenes().add(new examen(Integer.parseInt(idExamen.getText())));
-                JOptionPane.showMessageDialog(null, "El examen se agrego exitosamente.");
-                idExamen.setText("");
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error.");
-            }
+        
+        
+        if(v1.isSelected()){
+            pregTemp.add(new preguntas(p1.getText(),true));
+        } else if (f1.isSelected()){
+            pregTemp.add(new preguntas(p1.getText(),false));
+        }
+        
+        if(v2.isSelected()){
+            pregTemp.add(new preguntas(p2.getText(),true));
+        } else if (f2.isSelected()){
+            pregTemp.add(new preguntas(p2.getText(),false));
+        }
+        
+        if(v3.isSelected()){
+            pregTemp.add(new preguntas(p3.getText(),true));
+        } else if (f3.isSelected()){
+            pregTemp.add(new preguntas(p3.getText(),false));
+        }
+        
+        if(v4.isSelected()){
+            pregTemp.add(new preguntas(p4.getText(),true));
+        } else if (f4.isSelected()){
+            pregTemp.add(new preguntas(p4.getText(),false));
+        }
+        
+        if(v5.isSelected()){
+            pregTemp.add(new preguntas(p5.getText(),true));
+        } else if (f5.isSelected()){
+            pregTemp.add(new preguntas(p5.getText(),false));
+        }
+        
+        
+        try {
+            tempClase.getExamenes().add(new examen(pregTemp));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error.");
         }
     }//GEN-LAST:event_confirmarPreguntasActionPerformed
 
