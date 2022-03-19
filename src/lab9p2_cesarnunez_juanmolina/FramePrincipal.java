@@ -48,7 +48,13 @@ public class FramePrincipal extends javax.swing.JFrame {
         jb_registrarse = new javax.swing.JButton();
         jrb_alumno = new javax.swing.JRadioButton();
         jrb_maestro = new javax.swing.JRadioButton();
-        bg_tipoUsuario = new javax.swing.ButtonGroup();        	  	   jLabel1 = new javax.swing.JLabel();
+        bg_tipoUsuario = new javax.swing.ButtonGroup();
+        jf_examen = new javax.swing.JFrame();
+        jLabel1 = new javax.swing.JLabel();
+        tiempoLabel = new javax.swing.JLabel();
+        jf_admin = new javax.swing.JFrame();
+        jf_alumno = new javax.swing.JFrame();
+        jf_maestro = new javax.swing.JFrame();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -159,6 +165,64 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addGap(30, 30, 30)
                 .addComponent(jb_registrarse)
                 .addContainerGap(85, Short.MAX_VALUE))
+        );
+
+        jLabel1.setText("Tiempo:");
+
+        tiempoLabel.setText("jLabel3");
+
+        javax.swing.GroupLayout jf_examenLayout = new javax.swing.GroupLayout(jf_examen.getContentPane());
+        jf_examen.getContentPane().setLayout(jf_examenLayout);
+        jf_examenLayout.setHorizontalGroup(
+            jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jf_examenLayout.createSequentialGroup()
+                .addContainerGap(249, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(28, 28, 28)
+                .addComponent(tiempoLabel)
+                .addGap(43, 43, 43))
+        );
+        jf_examenLayout.setVerticalGroup(
+            jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jf_examenLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jf_examenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(tiempoLabel))
+                .addContainerGap(260, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jf_adminLayout = new javax.swing.GroupLayout(jf_admin.getContentPane());
+        jf_admin.getContentPane().setLayout(jf_adminLayout);
+        jf_adminLayout.setHorizontalGroup(
+            jf_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jf_adminLayout.setVerticalGroup(
+            jf_adminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jf_alumnoLayout = new javax.swing.GroupLayout(jf_alumno.getContentPane());
+        jf_alumno.getContentPane().setLayout(jf_alumnoLayout);
+        jf_alumnoLayout.setHorizontalGroup(
+            jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jf_alumnoLayout.setVerticalGroup(
+            jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jf_maestroLayout = new javax.swing.GroupLayout(jf_maestro.getContentPane());
+        jf_maestro.getContentPane().setLayout(jf_maestroLayout);
+        jf_maestroLayout.setHorizontalGroup(
+            jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jf_maestroLayout.setVerticalGroup(
+            jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -285,12 +349,29 @@ public class FramePrincipal extends javax.swing.JFrame {
         for (usuario u : usuarios) {
             if(u.getUsuario().equals(jtf_usuarioLogin.getText()) && u.getContrasena().equals(jtf_contraLogin.getText())){
                 band = true;
+                usuarioActual = u;
                 break;
             }
         }
         
         if(band == true){
             JOptionPane.showMessageDialog(null, "El usuario se logueó con éxito.");
+            if(usuarioActual instanceof admin){
+                this.setVisible(false);
+                jf_admin.setVisible(true);
+                jf_admin.pack();
+                jf_admin.setLocationRelativeTo(null);
+            }else if(usuarioActual instanceof alumno){
+                this.setVisible(false);
+                jf_alumno.setVisible(true);
+                jf_alumno.pack();
+                jf_alumno.setLocationRelativeTo(null);
+            }else if(usuarioActual instanceof maestro){
+                this.setVisible(false);
+                jf_maestro.setVisible(true);
+                jf_maestro.pack();
+                jf_maestro.setLocationRelativeTo(null);
+            }
         }else{
             JOptionPane.showMessageDialog(null, "El usuario o la contraseña no son válidos.");
         }
@@ -346,7 +427,6 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup bg_tipoUsuario;
-
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -359,6 +439,10 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jb_ingresarLogin;
     private javax.swing.JButton jb_registrarse;
     private javax.swing.JButton jb_registro;
+    private javax.swing.JFrame jf_admin;
+    private javax.swing.JFrame jf_alumno;
+    private javax.swing.JFrame jf_examen;
+    private javax.swing.JFrame jf_maestro;
     private javax.swing.JFrame jf_registro;
     private javax.swing.JRadioButton jrb_alumno;
     private javax.swing.JRadioButton jrb_maestro;
@@ -368,5 +452,6 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JTextField jtf_nombreRegistro;
     private javax.swing.JTextField jtf_usuarioLogin;
     private javax.swing.JTextField jtf_usuarioRegistro;
+    private javax.swing.JLabel tiempoLabel;
     // End of variables declaration//GEN-END:variables
 }
