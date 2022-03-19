@@ -59,6 +59,6 @@ public class clase {
 
     @Override
     public String toString() {
-        return "clase{" + "nombreClase=" + nombreClase + ", idClase=" + idClase + ", idMaestro=" + idMaestro + ", examenes=" + examenes + '}';
+        return nombreClase;
     }
 }

@@ -24,8 +24,6 @@ public class jf_examen extends javax.swing.JFrame {
             clasesCombo.addItem(temp.getNombreClase());
         }
         
-        
-        
     }
     
     /**

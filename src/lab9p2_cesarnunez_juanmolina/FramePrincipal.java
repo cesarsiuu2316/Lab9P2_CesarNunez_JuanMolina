@@ -517,6 +517,11 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jb_modificarAlumnoMouseClicked(evt);
             }
         });
+        jb_modificarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_modificarAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jp_modificarAlumnoLayout = new javax.swing.GroupLayout(jp_modificarAlumno);
         jp_modificarAlumno.setLayout(jp_modificarAlumnoLayout);
@@ -1016,6 +1021,10 @@ public class FramePrincipal extends javax.swing.JFrame {
     private void jb_agregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarAlumnoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_agregarAlumnoActionPerformed
+
+    private void jb_modificarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_modificarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_modificarAlumnoActionPerformed
 
     public boolean registroValido(String n, String u, String c, String c1){      
         if(n.equals("") != true && u.equals("") != true && c.equals("") != true && c1.equals("") != true && (jrb_alumno.isSelected() || jrb_maestro.isSelected())){
