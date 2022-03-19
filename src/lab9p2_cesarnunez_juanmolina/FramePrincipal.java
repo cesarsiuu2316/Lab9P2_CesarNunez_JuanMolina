@@ -16,6 +16,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         usuarios.add(a);
+        a.setNombre("Rig");
     }
 
     public ArrayList<usuario> getUsuarios() {
@@ -104,6 +105,8 @@ public class FramePrincipal extends javax.swing.JFrame {
         jp_listarMaestros = new javax.swing.JPanel();
         jp_eliminarMaestros = new javax.swing.JPanel();
         jp_agregarMaestro = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -416,6 +419,11 @@ public class FramePrincipal extends javax.swing.JFrame {
                 jb_agregarAlumnoMouseClicked(evt);
             }
         });
+        jb_agregarAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_agregarAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jp_agregarAlumnoLayout = new javax.swing.GroupLayout(jp_agregarAlumno);
         jp_agregarAlumno.setLayout(jp_agregarAlumnoLayout);
@@ -497,7 +505,9 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jtf_contraAlumno1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jcb_alumnoModificar.setBackground(new java.awt.Color(102, 255, 102));
         jcb_alumnoModificar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jcb_alumnoModificar.setForeground(new java.awt.Color(51, 51, 255));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel21.setText("Nombre: ");
@@ -750,6 +760,13 @@ public class FramePrincipal extends javax.swing.JFrame {
             .addComponent(jtp_crud, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -914,29 +931,26 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     private void jb_agregarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarAlumnoMouseClicked
         try{
-            alumno a = new alumno(Integer.parseInt(jtf_idAlumno.getText()), jtf_carreraAlumno.getText(), jtf_nombreAlumno.getText(), jtf_usuarioAlumno.getText(), jtf_contraAlumno.getText());
-            usuarios.add(a);
+            usuarios.add(new alumno(Integer.parseInt(jtf_idAlumno.getText()), jtf_carreraAlumno.getText(), jtf_nombreAlumno.getText(), jtf_usuarioAlumno.getText(), jtf_contraAlumno.getText()));
             JOptionPane.showMessageDialog(null, "El alumno se agregó con éxito.");
-            jtf_idAlumno.setText("");
-            jtf_carreraAlumno.setText("");
-            jtf_nombreAlumno.setText("");
-            jtf_usuarioAlumno.setText("");
-            jtf_contraAlumno.setText("");
+            state();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error.");
         }        
     }//GEN-LAST:event_jb_agregarAlumnoMouseClicked
 
     private void jtp_crudAlumnosStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jtp_crudAlumnosStateChanged
-        if(jtp_crud.getSelectedIndex() >= 0){
+       /*if(jtp_crud.getSelectedIndex() >= 0){
             if(jtp_crud.getSelectedIndex() == 1){
-                DefaultComboBoxModel cb = new DefaultComboBoxModel();
+                System.out.println("ho");
+                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
                 for (usuario u : usuarios) {
                     if(u instanceof alumno){
                         cb.addElement(u);
+                        System.out.println("h");
                     }
                 }
-                jcb_alumnoModificar.setModel(cb);
+                //jcb_alumnoModificar.setModel(cb);
             }else if(jtp_crud.getSelectedIndex() == 2){
                 jta_listarAlumnos.setText("");
                 String s = "";
@@ -947,17 +961,52 @@ public class FramePrincipal extends javax.swing.JFrame {
                 }
                 jta_listarAlumnos.setText(s);
             }else if(jtp_crud.getSelectedIndex() == 3){
-                DefaultComboBoxModel cb = new DefaultComboBoxModel();
+                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
+                
+                for (usuario u : usuarios) {
+                    if(u instanceof alumno){
+                        cb.addElement(u.toString());
+                    }
+                }
+                //jcb_eliminarAlumnos.setModel(cb);
+            }
+        }*/
+    }//GEN-LAST:event_jtp_crudAlumnosStateChanged
+
+    private void state(){
+        if(jtp_crud.getSelectedIndex() >= 0){
+            if(jtp_crud.getSelectedIndex() == 1){
+                System.out.println("ho");
+                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
                 for (usuario u : usuarios) {
                     if(u instanceof alumno){
                         cb.addElement(u);
+                        System.out.println("h");
                     }
                 }
-                jcb_eliminarAlumnos.setModel(cb);
+                //jcb_alumnoModificar.setModel(cb);
+            }else if(jtp_crud.getSelectedIndex() == 2){
+                jta_listarAlumnos.setText("");
+                String s = "";
+                for (usuario u : usuarios) {
+                    if(u instanceof alumno){
+                        s += "Nombre: " + u.getNombre() + ", ID: " + ((alumno) u).getIdEstudiante() + "\n";
+                    }
+                }
+                jta_listarAlumnos.setText(s);
+            }else if(jtp_crud.getSelectedIndex() == 3){
+                DefaultComboBoxModel cb = (DefaultComboBoxModel) jcb_alumnoModificar.getModel();
+                
+                for (usuario u : usuarios) {
+                    if(u instanceof alumno){
+                        cb.addElement(u.toString());
+                    }
+                }
+                //jcb_eliminarAlumnos.setModel(cb);
             }
         }
-    }//GEN-LAST:event_jtp_crudAlumnosStateChanged
-
+    }
+    
     private void jb_modificarAlumnoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_modificarAlumnoMouseClicked
         try{
             for (usuario u : usuarios) {
@@ -1003,6 +1052,10 @@ public class FramePrincipal extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Complete todos los campos.");
         }
     }//GEN-LAST:event_jb_modificarAdminMouseClicked
+
+    private void jb_agregarAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_agregarAlumnoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jb_agregarAlumnoActionPerformed
 
     public boolean registroValido(String n, String u, String c, String c1){      
         if(n.equals("") != true && u.equals("") != true && c.equals("") != true && c1.equals("") != true && (jrb_alumno.isSelected() || jrb_maestro.isSelected())){
@@ -1079,7 +1132,9 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jb_agregarAlumno;
     private javax.swing.JButton jb_crearExamen;
     private javax.swing.JButton jb_crudAdmin;

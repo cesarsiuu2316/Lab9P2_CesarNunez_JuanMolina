@@ -19,6 +19,10 @@ public class usuario {
         this.usuario = usuario;
         this.contrasena = contrasena;
     }
+    public usuario(String nombre, String usuario, String contrasena) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+    }
     
     public usuario(String contrasena) {
         this.contrasena = contrasena;
@@ -51,6 +55,6 @@ public class usuario {
 
     @Override
     public String toString() {
-        return "usuario{" + "nombre=" + nombre + ", contrasena=" + contrasena + '}';
+        return nombre;
     }
 }

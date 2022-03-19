@@ -30,8 +30,6 @@ public class alumno extends usuario{
         this.carrera = carrera;
     }
 
-    
-
     public int getIdEstudiante() {
         return idEstudiante;
     }
@@ -54,12 +52,6 @@ public class alumno extends usuario{
 
     public void setClases(ArrayList<clase> clases) {
         this.clases = clases;
-    }
-
-    @Override
-    public String toString() {
-        return super.getNombre();
-    }
-    
+    }    
     
 }

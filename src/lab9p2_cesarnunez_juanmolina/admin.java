@@ -17,5 +17,9 @@ public class admin extends usuario {
     public admin(String usuario, String contrasena) {
         super(usuario, contrasena);
     }
+    
+    public admin(String nombre, String usuario, String contrasena) {
+        super(nombre, usuario, contrasena);
+    }
         
 }
