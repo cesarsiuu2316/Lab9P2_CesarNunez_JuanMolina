@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class examen {
     private ArrayList<preguntas> examen;
-    private int nota;
+    private int nota,idExamen;
 
     public examen() {
     }
@@ -22,6 +22,14 @@ public class examen {
         this.examen = examen;
     }
 
+    public int getIdExamen() {
+        return idExamen;
+    }
+
+    public void setIdExamen(int idExamen) {
+        this.idExamen = idExamen;
+    }
+    
     public ArrayList<preguntas> getExamen() {
         return examen;
     }

@@ -94,7 +94,7 @@ public class jf_examen extends javax.swing.JFrame {
         }
         
         for (examen temp : tempClase.getExamenes()) {
-            examenCombo.addItem(temp.getIdExamen());
+            examenCombo.addItem(Integer.parseInt(temp.getIdExamen()));
         }
     }//GEN-LAST:event_seleccionarClaseActionPerformed
 
