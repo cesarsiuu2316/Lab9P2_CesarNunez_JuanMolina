@@ -84,7 +84,7 @@ public class adminExamen implements Runnable{
         while(estado){
             for (hrs= 0; hrs < 60 ; hrs++) {
                 for(mins=0; mins<60; mins++){
-                    setNotif("Ya han pasado: "+mins+" minutos");
+                    setNotif("Ya has pasado "+mins+" minutos en el examen!");
                     for(secs=0; secs<60;secs++){
                         String temp = String.format("%02d",hrs)+ ":" + String.format("%02d",mins) + ":" + String.format("%02d",secs);
                         setTiempo(temp);
@@ -95,7 +95,6 @@ public class adminExamen implements Runnable{
                     }
                 }
             }
-            
         }
     }
 }

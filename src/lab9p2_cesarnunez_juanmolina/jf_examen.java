@@ -11,11 +11,13 @@ package lab9p2_cesarnunez_juanmolina;
  */
 public class jf_examen extends javax.swing.JFrame {
 
-    /**
-     * Creates new form jf_examen
-     */
+    private alumno usuarioExamen = new alumno();
     public jf_examen() {
         initComponents();
+        
+        for (clase temp : usuarioExamen.getClases()) {
+            clasesCombo.addItem(temp.getNombreClase());
+        }
     }
 
     /**
@@ -30,6 +32,11 @@ public class jf_examen extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         tiempoLabel = new javax.swing.JLabel();
         notificacionLabel = new javax.swing.JLabel();
+        clasesCombo = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        seleccionarClase = new javax.swing.JButton();
+        examenCombo = new javax.swing.JComboBox<>();
+        seleccionarExamen = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -39,8 +46,61 @@ public class jf_examen extends javax.swing.JFrame {
         getContentPane().add(tiempoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, 80, 20));
         getContentPane().add(notificacionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 90, 210, 20));
 
+        clasesCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {  }));
+        clasesCombo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clasesComboActionPerformed(evt);
+            }
+        });
+        getContentPane().add(clasesCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 150, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setText("EXAMEN");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 160, 40));
+
+        seleccionarClase.setText("SELECCIONAR");
+        seleccionarClase.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seleccionarClaseActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seleccionarClase, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, -1, -1));
+
+        examenCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {  }));
+        getContentPane().add(examenCombo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 150, -1));
+
+        seleccionarExamen.setText("SELECCIONAR");
+        seleccionarExamen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                seleccionarExamenActionPerformed(evt);
+            }
+        });
+        getContentPane().add(seleccionarExamen, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 140, -1, -1));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void clasesComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clasesComboActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clasesComboActionPerformed
+
+    private clase tempClase = new clase();
+    private void seleccionarClaseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionarClaseActionPerformed
+        for (clase temp : usuarioExamen.getClases()) {
+            if(clasesCombo.getSelectedItem() == temp.getNombreClase()){
+                tempClase = usuarioExamen.getClases().get(usuarioExamen.getClases().indexOf(temp));
+                break;
+            }
+        }
+        
+        for (examen temp : tempClase.getExamenes()) {
+            examenCombo.addItem(temp.getIdExamen());
+        }
+    }//GEN-LAST:event_seleccionarClaseActionPerformed
+
+    private void seleccionarExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_seleccionarExamenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_seleccionarExamenActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,8 +138,17 @@ public class jf_examen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> clasesCombo;
+    private javax.swing.JComboBox<String> examenCombo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel notificacionLabel;
+    private javax.swing.JButton seleccionarClase;
+    private javax.swing.JToggleButton seleccionarExamen;
     private javax.swing.JLabel tiempoLabel;
     // End of variables declaration//GEN-END:variables
+
+    public void jf_examen(alumno temp ){
+        this.usuarioExamen = temp;
+    }
 }
