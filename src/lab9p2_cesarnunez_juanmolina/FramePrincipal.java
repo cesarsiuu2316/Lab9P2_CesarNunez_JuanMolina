@@ -293,22 +293,22 @@ public class FramePrincipal extends javax.swing.JFrame {
         jf_alumno.getContentPane().setLayout(jf_alumnoLayout);
         jf_alumnoLayout.setHorizontalGroup(
             jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 555, Short.MAX_VALUE)
         );
         jf_alumnoLayout.setVerticalGroup(
             jf_alumnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 427, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout jf_maestroLayout = new javax.swing.GroupLayout(jf_maestro.getContentPane());
         jf_maestro.getContentPane().setLayout(jf_maestroLayout);
         jf_maestroLayout.setHorizontalGroup(
             jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 509, Short.MAX_VALUE)
         );
         jf_maestroLayout.setVerticalGroup(
             jf_maestroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 455, Short.MAX_VALUE)
         );
 
         jf_crud.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
