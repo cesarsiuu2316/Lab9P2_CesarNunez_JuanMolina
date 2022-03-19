@@ -7,6 +7,7 @@ package lab9p2_cesarnunez_juanmolina;
 
 import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,6 +55,11 @@ public class jf_adminexamen extends javax.swing.JFrame {
         clasesCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         agregarExamen.setText("AGREGAR");
+        agregarExamen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregarExamenActionPerformed(evt);
+            }
+        });
 
         jToggleButton1.setText("SALIR");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -118,8 +124,30 @@ public class jf_adminexamen extends javax.swing.JFrame {
     }//GEN-LAST:event_idExamenActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
+        dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
+
+    private void agregarExamenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregarExamenActionPerformed
+        boolean integer = false;
+        if(!integer){
+            try{
+                Integer.parseInt(idExamen.getText());
+            }catch(Exception e){
+                JOptionPane.showMessageDialog(null, "El ID debe ser un numero.");
+            }
+            integer = true;
+        }    
+        
+        if(integer){
+            try {
+                ((clase) clasesCombo.getSelectedItem()).getExamenes().add(new examen(Integer.parseInt(idExamen.getText())));
+                JOptionPane.showMessageDialog(null, "El examen se agrego exitosamente.");
+                idExamen.setText("");  
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error.");
+            }
+        }
+    }//GEN-LAST:event_agregarExamenActionPerformed
 
     public void jf_adminexamen(ArrayList<usuario> temp){
         this.au=temp;

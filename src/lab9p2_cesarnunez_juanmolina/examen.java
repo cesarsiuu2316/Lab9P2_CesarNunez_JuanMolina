@@ -18,6 +18,12 @@ public class examen {
     public examen() {
     }
 
+    public examen(int idExamen) {
+        this.idExamen = idExamen;
+    }
+    
+    
+
     public examen(ArrayList<preguntas> examen) {
         this.examen = examen;
     }
