@@ -12,6 +12,10 @@ public class FramePrincipal extends javax.swing.JFrame {
     private ArrayList<clase> clases = new ArrayList();
     private admin a = new admin("admin","admin1234");
     private usuario usuarioActual;
+
+    public ArrayList<clase> getClases() {
+        return clases;
+    }
     
     public FramePrincipal() {
         initComponents();
@@ -1092,7 +1096,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_ingresarLoginMouseClicked
 
     private void jb_crearExamenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearExamenMouseClicked
-        jf_adminexamen a = new jf_adminexamen();
+        jf_adminexamen a = new jf_adminexamen(clases);
         a.setVisible(true);
         a.pack();
         a.setLocationRelativeTo(null);
