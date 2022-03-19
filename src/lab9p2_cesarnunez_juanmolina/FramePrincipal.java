@@ -105,8 +105,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         jp_listarMaestros = new javax.swing.JPanel();
         jp_eliminarMaestros = new javax.swing.JPanel();
         jp_agregarMaestro = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -505,9 +503,9 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jtf_contraAlumno1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jcb_alumnoModificar.setBackground(new java.awt.Color(102, 255, 102));
+        jcb_alumnoModificar.setBackground(new java.awt.Color(255, 255, 255));
         jcb_alumnoModificar.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jcb_alumnoModificar.setForeground(new java.awt.Color(51, 51, 255));
+        jcb_alumnoModificar.setForeground(new java.awt.Color(51, 51, 51));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel21.setText("Nombre: ");
@@ -760,13 +758,6 @@ public class FramePrincipal extends javax.swing.JFrame {
             .addComponent(jtp_crud, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList1);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -920,7 +911,10 @@ public class FramePrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_ingresarLoginMouseClicked
 
     private void jb_crearExamenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crearExamenMouseClicked
-        
+        jf_adminexamen a = new jf_adminexamen();
+        a.setVisible(true);
+        a.pack();
+        a.setLocationRelativeTo(null);
     }//GEN-LAST:event_jb_crearExamenMouseClicked
 
     private void jb_crudAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_crudAdminMouseClicked
@@ -1098,9 +1092,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton jb_agregarAlumno;
     private javax.swing.JButton jb_crearExamen;
     private javax.swing.JButton jb_crudAdmin;
